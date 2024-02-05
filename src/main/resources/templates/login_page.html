@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+<!--    <link rel="stylesheet" type="text/css" href="style.css">-->
+    <link href="" th:href="@{/css/style.css}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="" th:src="@{/js/scripts.js}"></script>
+</head>
+<body>
+    <div id="colorstrip"/>
+        <h1>LogIn Page Using Spring Boot</h1>
+    </div>
+
+    <div class="box">
+            <div class="container">
+                <h2>LogIn / Registration</h2>
+            </div>
+        <form id="loginform" onsubmit="sendOTP(); return false;">
+<!--        <form  th:action="@{/sendOTP}" method="post"  id="loginform">-->
+            <p style="font-size:20px; font-weight:700;margin-bottom:3px">Your Email</p>
+            <input type="text" class="userName" name="emailId" placeholder="Enter your email" required>
+            <center><input type="submit"class="button" name="sendOtp" value="Send OTP" style="font-size:15px;font-weight:700" /></center>
+        </form>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="otpModal">
+        <label style="font-size:20px;">Enter OTP</label>
+        <form class="otpform" action="#">
+            <div class="input-field">
+                <input type="number" />
+                <input type="number" disabled/>
+                <input type="number" disabled/>
+                <input type="number" disabled/>
+                <input type="number" disabled/>
+                <input type="number" disabled/>
+            </div>
+        </form>
+        <center> <button onclick="verifyOTP();" class="buttons">Verify</button></center>
+    </div>
+
+
+    <div id="colorstrip2"/>
+        <div class="footer">
+            <h4 style="">© 2024-ASSIGNMENT CREATED BY SANJAY</h4>
+            <h4>CONTACT : <a style="color:wheat" href="mailto:skstlenovo@gmail.com">SKSTLENOVO@GMAIL.COM</a></h4>
+            <h4>SPRING BOOT PROJECT</h4>
+        </div>
+    </div>
+
+</body>
+</html>
